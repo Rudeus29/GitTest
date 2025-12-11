@@ -1,0 +1,36 @@
+@startuml
+left to right direction
+actor 学生 as g
+actor 教師 as k
+package El-campus{
+    usecase "教材ダウンロード" as g1
+    usecase "アンケート回答" as g2
+    usecase "掲示板閲覧" as g3
+    usecase "小テスト受ける" as g4
+    usecase "コンテンツ視聴" as g5
+    usecase "課題設定" as g6
+}
+g -up-> g1
+g -up-> g2
+g -up-> g3
+g -up-> g4
+g -up-> g5
+k =up=> g1
+k =up=> g2
+k =up=> g3
+k =up=> g4
+k =up=> g5
+k =up=> g6
+package UniPa{
+    usecase "成績参照" as f1
+    usecase "履修登録" as f2
+    usecase "シラバス参照" as f3
+    usecase "学生時間表" as f4
+    usecase "資格希望" as f5
+}
+g--> f1
+g --> f2
+g--> f3
+g--> f4
+g --> f5
+@enduml
