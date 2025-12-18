@@ -1,0 +1,13 @@
+@startuml
+actor MainFunction
+participant Server as "Calculate"
+participant Db as "GetInput"
+
+MainFunction -> Server :関数の呼び出し
+Server -> Db:入力データを要求
+Db --> Server:入力データを返す
+Server --> MainFunction: 計算結果を返す
+MainFunction -> MainFunction :表示
+@enduml
+
+#非同期

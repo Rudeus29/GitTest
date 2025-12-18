@@ -1,0 +1,13 @@
+@startuml
+actor Client
+participant Server as "Server"
+participant Db as "DB"
+
+Client ->> Server :データを要求
+Server ->> Db:問い合わせ
+Db -->> Server:結果を返す
+Server -->> Client: データをを返す
+
+@enduml
+
+#非同期
